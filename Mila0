@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+class kk {
+int x=0, y=0;
+};
 
+int main () {
+cout << "We are going to have the best group project!" << endl;
 }
