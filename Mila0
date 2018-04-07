@@ -1,10 +1,48 @@
 #include <iostream>
 using namespace std;
 
-class kk {
-int x=0, y=0;
+class Kk {
+    int x=0, y=0;
+  public:
+    int get_x () return x;
+    int get_y () return y;
+    void set_x (int k) x = k;
+    void set_y (int k) y = k;
 };
 
+void die() {
+  cout << Looks like you didn't pay your taxes! << endl;
+  return (1);
+}
+
 int main () {
-cout << "We are going to have the best group project!" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "---------Welcome to the Real World!---------" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "-------Please choose your character.--------" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "               1. Dancer                    " << endl;
+  cout << "               2. Skater                    " << endl;
+  cout << "               3. Robber                    " << endl;
+  cout << "               4. Police                    " << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  
+  int num = 0;
+  cin >> num;
+  if (!cin) die();
+  if (num < 1 || num > 4) die();
+  if (num == 1) {
+    cout << "Welcome to the 42nd annual Dance Competition!" << endl;
+  }
+  if (num == 2) {
+    cout << "Welcome to the 42nd annual Vans Skating Competition!" << endl;
+  }
+  if (num == 3) {
+    cout << "Wow! Look at all these people. It is going to be easy to get away with this" << endl;
+  }
+  if (num == 4) {
+    cout << "Be on the look out for any shady characters. The safety of the public is in our hands." endl;
+  }
 }
