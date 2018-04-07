@@ -1,48 +1,72 @@
 #include <iostream>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <ncurses.h>
+#include <utility>
+#include <limits>
+#include <vector>
+#include <queue>
+#include <set>
 using namespace std;
+
+class Dancer;
+class Skater;
+class Citizen;
+
+const unsigned char SPACE  = ' '; //An open space
+const unsigned char EDGE   = '!'; //A wall space; impassable
+const unsigned char OCEAN  = '~';
+const unsigned char MONEY  = '$';
+const unsigned char POLICE = 'P';
+const unsigned char THIEF  = 'Y';
 
 class Kk {
     int x=0, y=0;
   public:
-    int get_x () return x;
-    int get_y () return y;
-    void set_x (int k) x = k;
-    void set_y (int k) y = k;
+    //int get_x () return x;
+    //int get_y () return y;
+    //void set_x (int k) x = k;
+    //void set_y (int k) y = k;
 };
 
 void die() {
-  cout << Looks like you didn't pay your taxes! << endl;
-  return (1);
+  cout << "Looks like you didn't pay your taxes!" << endl;
+  exit (0);
 }
 
+bool play_pause; //play or pause the game
+
+const int UP = 65; //key codes for arrows
+const int DOWN = 66;
+const int LEFT = 68;
+const int RIGHT = 67;
+
 int main () {
-  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  cout << "---------Welcome to the Real World!---------" << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "Welcome to the 42nd Annual Seaside Production!" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
   cout << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  cout << "-------Please choose your character.--------" << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  cout << "               1. Dancer                    " << endl;
-  cout << "               2. Skater                    " << endl;
-  cout << "               3. Robber                    " << endl;
-  cout << "               4. Police                    " << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "--------Please choose your character.---------" << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "               1. Performer                   " << endl;
+  cout << "               2. Skater                      " << endl;
+  cout << "               3. Citizen                     " << endl;
+  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
   
   int num = 0;
   cin >> num;
   if (!cin) die();
-  if (num < 1 || num > 4) die();
+  if (num < 1 || num > 3) die();
+  
   if (num == 1) {
-    cout << "Welcome to the 42nd annual Dance Competition!" << endl;
+    cout << "Places! Places! We are on in 5...4...3...2...and...ACTION!" << endl;
   }
   if (num == 2) {
-    cout << "Welcome to the 42nd annual Vans Skating Competition!" << endl;
+    cout << "Remember, everyone is counting on us to put on a great show!" << endl;
   }
   if (num == 3) {
-    cout << "Wow! Look at all these people. It is going to be easy to get away with this" << endl;
-  }
-  if (num == 4) {
-    cout << "Be on the look out for any shady characters. The safety of the public is in our hands." endl;
+    cout << "Wow! Look at all these performers. This is going to be a great show!" << endl;
   }
 }
