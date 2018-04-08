@@ -10,7 +10,7 @@
 #include <set>
 using namespace std;
 
-class Dancer;
+class Perfomer;
 class Skater;
 class Citizen;
 
@@ -31,7 +31,7 @@ class Kk {
 };
 
 void die() {
-  cout << "Looks like you didn't pay your taxes!" << endl;
+  cout << "Looks like you got Lost!" << endl;
   exit (0);
 }
 
@@ -43,30 +43,21 @@ const int LEFT = 68;
 const int RIGHT = 67;
 
 int main () {
-  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  cout << "Welcome to the 42nd Annual Seaside Production!" << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+  cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^
+  cout << "-------------------------------------" << endl;
+  cout << "-x--x--- Lost in Los Angeles ---x--x-" << endl;
+  cout << "-------------------------------------" << endl;
+  cout << "<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<" << endl;
   cout << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  cout << "--------Please choose your character.---------" << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  cout << "               1. Performer                   " << endl;
-  cout << "               2. Skater                      " << endl;
-  cout << "               3. Citizen                     " << endl;
-  cout << "<><><><><><><><><><><><><><><><><><><><><><><>" << endl;
-  
-  int num = 0;
-  cin >> num;
+  string name = 'Player 1';
+  cout << "What is your name, " << name << "?" << endl
+  cin >> name;
   if (!cin) die();
-  if (num < 1 || num > 3) die();
+  cout << "Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
+  cout << "If you want to get out alive, follow my instructions and don't mess up. " << endl;
+  cout << "Your first task will be to visit the fortune teller." << endl;
+  cout << "However, her humble abode is hidden in the mall." << endl;
   
-  if (num == 1) {
-    cout << "Places! Places! We are on in 5...4...3...2...and...ACTION!" << endl;
-  }
-  if (num == 2) {
-    cout << "Remember, everyone is counting on us to put on a great show!" << endl;
-  }
-  if (num == 3) {
-    cout << "Wow! Look at all these performers. This is going to be a great show!" << endl;
-  }
+  cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
+  cout << "She will now tell your fortune based on your information." << endl;
 }
