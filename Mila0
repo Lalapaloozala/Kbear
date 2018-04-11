@@ -10,9 +10,11 @@
 #include <set>
 using namespace std;
 
-class Perfomer;
-class Skater;
-class Citizen;
+class Player1 {
+public:
+    int health =10;
+    
+};
 
 const unsigned char SPACE  = ' '; //An open space
 const unsigned char EDGE   = '!'; //A wall space; impassable
