@@ -6,6 +6,8 @@
 #include <algorithm>
 using namespace std;
 
+string name = "Player 1";   //player
+
 void die() {
     cout << "  ,'*********',  " << endl;
     cout << ".'             '." << endl;
@@ -48,23 +50,22 @@ int main() {
     cout << endl;
 
     //Point map;
-    string name = "Player 1";   //player
+    //string name = "Player 1";   //player
     string h    = "Keller";     //host
     string ft   = "Sabrina";    //fortune teller
     string kk   = "crystal";    //object
     string m    = "monster";     //monster
 
-
     cout << "What is your name, " << name << " ?" << endl;
-    getline(cin, name);
+    cin >> name;
     if (!cin) die();
     cout << endl;
 
     cout << h << ": Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
     cout << h << ": You must travel through the city to find " << kk << "s to find your way home." << endl;
     cout << h << ": If you need help, just enter 'F' to visit the fortune teller, " << ft << "." << endl;
-    //cout << h << ": " << ft << " can tell your fortune that will be either positive or negative." << endl;
     cout << h << ": " << ft << " can give you clues as to where the " << kk << "s are." << endl;
+    
     while (true) {
         cout << "Your coordinates are: (" << endl; //<< map.get_x() << ", " << map.get_y() << ")." << endl;
         break;
