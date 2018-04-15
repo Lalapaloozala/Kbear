@@ -2,19 +2,25 @@
 #include <cmath>
 #include <ctime>
 #include <cstdlib>
-#include <ncurses.h>
-#include <utility>
-#include <limits>
 #include <vector>
-#include <queue>
-#include <set>
 #include <algorithm>
 using namespace std;
+
+void die() {
+    cout << "  ,'*********',  " << endl;
+    cout << ".'             '." << endl;
+    cout << "|     R.I.P.    |" << endl;
+    cout << "| " << name<< " |" << endl;
+    cout << "| Gone, but not |" << endl;
+    cout << "|   forgotten.  |" << endl;
+    cout << "^^^^^^^^^^^^^^^^^" << endl;
+    exit(1);
+}
 
 class Point {
     int x = 0, y = 0;
   public:
-    Point();
+    Point(){}
     Point(int new_x, int new_y) {
         x = new_x;
         y = new_y;
@@ -32,16 +38,6 @@ class Point {
         y = k;
     }
 };
-
-void die() {
-    cout << "Looks like you didn't pay your taxes!" << endl;
-}
-
-bool play_pause; //play or pause the game
-const int UP = 65; //key codes for arrows
-const int DOWN = 66;
-const int LEFT = 68;
-const int RIGHT = 67;
 
 int main() {
     cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^" << endl;
