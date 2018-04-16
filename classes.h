@@ -3,6 +3,7 @@ using namespace std;
 
 string name = "Player 1";
 int win = 0;
+int health = 10;
 
 void die() {
     cout << "  ,'*********',  " << endl;
@@ -64,13 +65,10 @@ class Point {
 class Puzzle{
     protected://The location for the puzzles
     bool solved = false;
-    int health = 10;
            
     public:
     void damage(){health--;}
     void heal(){health++;}
-    int get_health(){return health;}
-
 };
 
 class puzzle1 : public Puzzle{
@@ -89,8 +87,8 @@ class puzzle1 : public Puzzle{
             else{
                 Puzzle::damage();
                 cout << "That is incorrect. You lose one life point." << endl;
-                cout << "You have " << Puzzle::get_health() << " life points remaining." << endl;}
-            if (Puzzle::get_health() <= 0) die();
+                cout << "You have " << health << " life points remaining." << endl;}
+            if (health <= 0) die();
         }
         cout << "You have solved this puzzle." << endl;
     }
@@ -113,8 +111,8 @@ class puzzle2 : public Puzzle{
             else {
                 Puzzle:: damage();
                 cout << "That is incorrect. You lose one life point." << endl;
-                cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
-            if (Puzzle::get_health() <= 0) die();
+                cout << "You have " << health << " life points remaining." << endl;
+            if (health <= 0) die();
             }
         }
         cout << "You have solved this puzzle." << endl;
@@ -136,8 +134,8 @@ class puzzle3 : public Puzzle{
             else {
                 Puzzle::damage();
                 cout << "That is incorrect. You lose one life point." << endl;
-                cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
-            if (Puzzle::get_health() <= 0) die();
+                cout << "You have " << health << " life points remaining." << endl;
+            if (health <= 0) die();
             }
         }
         cout << "You have solved this puzzle." << endl;
@@ -160,8 +158,8 @@ class puzzle4 : public Puzzle{
             else {
                 Puzzle::damage();
                 cout << "That is incorrect. You lose one life point." << endl;
-                cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
-            if (Puzzle::get_health() <= 0) die();
+                cout << "You have " << health << " life points remaining." << endl;
+            if (health <= 0) die();
             }
         }
         cout << "You have solved this puzzle." << endl;
