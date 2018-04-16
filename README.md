@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+CSCI41 Simulation Project: Kamilah, Kenneth, Kory, & Alex
 
-You can use the [editor on GitHub](https://github.com/Lalapaloozala/Kbear/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Title: Lost in Los Angeles
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Theme: Your character is working there way through "Los Angeles", trying to find gems to undue a cure thats been placed on them. A psychic serves as a guide through the dilemma, which can be found in the intro of the game, along with in the paugh menu. The psychic gives hints towards jewels, congratulates success, and warns of further dangers. After your character has found the needed items, you face your final challenge and hope- fully live to see another day in L.A.
 
-### Markdown
+Kamilah: Scripting Create a entry/exit scroll that explains the game and add whatever extra details you think will give the game more appeal. Your scripting will most likely sit in int main() or can be part of a function call depending on how you would like to do it.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Kenneth(Project Manager): Mapping Create a map class for the game, with constructors, destructors, function calls to move, and access puzzle functions, etc.
 
-```markdown
-Syntax highlighted code block
+Kory: Challenges I know we already said puzzles/riddles but im leaving that open to you as to what you want to happen as the character moves through out the game. As im writing the code now, i have that as the character move they hit a number and that number gets sent into a function called puzzle. That function will be where you can create the challenges they have to overcome.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Lalapaloozala/Kbear/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Alex: Front/Back End Developer Assist in all front and back coding and product development. Create classes for puzzles.
