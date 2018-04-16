@@ -19,7 +19,6 @@ int main() {
     puzzle2 puzzle2;
     puzzle3 puzzle3;
     puzzle4 puzzle4;
-    Puzzle player1;
     
     string h    = "Keller";     //host
     string ft   = "Sabrina";    //fortune teller
@@ -72,7 +71,7 @@ int main() {
         if (map.get_x() == 8 && map.get_y() == 4) {
             puzzle4.quiz();
         }
-        if (player1.get_health() <= 0) die();
+        if (health <= 0) die();
         if (win == 4) break;
     }
     cout << "*',.'+.,'-.*.,'-',.+'-*',.+.,'-.,*',+..',.'*.+',','*+',.+" << endl;
