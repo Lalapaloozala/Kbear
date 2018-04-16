@@ -19,7 +19,8 @@ int main() {
     puzzle2 puzzle2;
     puzzle3 puzzle3;
     puzzle4 puzzle4;
-
+    Puzzle player1;
+    
     string h    = "Keller";     //host
     string ft   = "Sabrina";    //fortune teller
     string kk   = "crystal";    //object
