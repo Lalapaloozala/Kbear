@@ -1,3 +1,20 @@
+#include <iostream>
+using namespace std;
+
+string name = "Player 1";
+int win = 0;
+
+void die() {
+    cout << "  ,'*********',  " << endl;
+    cout << ".'             '." << endl;
+    cout << "|     R.I.P.    |" << endl;
+    cout << "| " << name << " |" << endl;
+    cout << "| Gone, but not |" << endl;
+    cout << "|   forgotten.  |" << endl;
+    cout << "^^^^^^^^^^^^^^^^^" << endl;
+    exit(1);
+}
+
 class Point {
     int x = 5, y = 5;
     public:
@@ -41,5 +58,87 @@ class Point {
         y--;
         if (y > MAX_Y) y = MAX_Y;
         if (y < MIN_Y) y = MIN_Y;
+    }
+};
+
+class Puzzle{
+    protected://The location for the puzzles
+    bool solved = false;
+    int health = 10;
+           
+    public:
+    void damage(){health--;}
+    void heal(){health++;}
+    int get_health(){return health;}
+
+};
+
+class puzzle1 : public Puzzle{
+    public:
+    string answer;
+    void quiz(){
+        while(solved == false) {
+            cout << "Jimmy's mother had three children. The first was called April\n";
+            cout << "and the second was called May. What was the name of the third?\n";
+            cin >> answer;
+            if(answer == "JIMMY" || answer =="jimmy"){
+                win++;
+                solved = true;
+                cout << "That is correct.\n";
+            }
+            else{
+                Puzzle::damage();
+                cout << "That is incorrect. You lose one life point." << endl;
+                cout << "You have " << Puzzle::get_health() << " life points remaining." << endl;}
+            if (Puzzle::get_health() <= 0) die();
+        }
+        cout << "You have solved the puzzle." << endl;
+    }
+};
+
+class puzzle3 : public Puzzle{
+    public:
+    string answer;
+    void quiz(){
+        while(solved == false) {
+            cout <<  "Poor people have it. Rich people need it. If you eat it you die. What is it?" << endl;
+            cin >> answer;
+            if(answer == "NOTHING" || answer =="nothing"){
+                win++;
+                solved = true;
+                cout << "That is correct.\n";
+            }
+            else {
+                Puzzle::damage();
+                cout << "That is incorrect. You lose one life point." << endl;
+                cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
+            if (Puzzle::get_health() <= 0) die();
+            }
+        }
+        cout << "You have solved the puzzle." << endl;
+    }
+};
+
+class puzzle4 : public Puzzle{
+    public:
+    string answer;
+    void quiz() {
+        while(solved == false){
+            cout << "I have keys that fit no locks, a space but no room." << endl;
+            cout << "You can enter, but never leave. What am I?" << endl;
+            cin >> answer;
+            if(answer == "KEYBOARD" || answer == "keyboard"){
+                win++;
+                solved = true;
+                cout << "That is correct.\n";
+            }
+            else {
+                Puzzle::damage();
+                cout << "That is incorrect. You lose one life point." << endl;
+                cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
+            if (Puzzle::get_health() <= 0) die();
+            }
+        }
+        cout << "You have solved the puzzle." << endl;
     }
 };
