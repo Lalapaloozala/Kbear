@@ -19,14 +19,12 @@ int main() {
     puzzle2 puzzle2;
     puzzle3 puzzle3;
     puzzle4 puzzle4;
-    Puzzle player1;
 
     string h    = "Keller";     //host
     string ft   = "Sabrina";    //fortune teller
     string kk   = "crystal";    //object
-    string m    = "monster";     //monster
 
-    cout << "What is your name, " << name << " ?" << endl;
+    cout << "What is your name, " << name << "?" << endl;
     getline(cin, name);
     if (!cin) die();
     cout << endl;
@@ -49,16 +47,16 @@ int main() {
         if (c == 'F' || c == 'f') {
             cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
             if (map.get_x() <= 5 && map.get_y() >= 5) {
-                cout << "Go to 36 N. Ocean Ave." << endl;
+                cout << ft << ": Go to 36 N. Ocean Ave." << endl;
             }
             if (map.get_x() <= 5 && map.get_y() < 5) {
-                cout << "Go to Kerney's favorite place." << endl;
+                cout << ft << ": Go to Kerney's favorite place." << endl;
             }
             if (map.get_x() > 5 && map.get_y() <= 5) {
-                cout << "Vist the year that is the title of the famous book written by George Orwell." << endl;
+                cout << ft << ": Vist the year that is the title of the famous book written by George Orwell." << endl;
             }
             if (map.get_x() > 5 && map.get_y() > 5) {
-                cout << "Go to the spot where in binary code it reads 'on off on off'." << endl;
+                cout << ft << ": Go to the spot where in binary code it reads 'on off on off'." << endl;
             }
         }
         if (map.get_x() == 4 && map.get_y() == 2) {
