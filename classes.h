@@ -84,7 +84,7 @@ class puzzle1 : public Puzzle{
             if(answer == "JIMMY" || answer =="jimmy"){
                 win++;
                 solved = true;
-                cout << "That is correct.\n";
+                cout << "That is correct. You have found a crystal!\n";
             }
             else{
                 Puzzle::damage();
@@ -92,7 +92,32 @@ class puzzle1 : public Puzzle{
                 cout << "You have " << Puzzle::get_health() << " life points remaining." << endl;}
             if (Puzzle::get_health() <= 0) die();
         }
-        cout << "You have solved the puzzle." << endl;
+        cout << "You have solved this puzzle." << endl;
+    }
+};
+
+class puzzle2 : public Puzzle{
+    public:
+    string answer;
+    void quiz(){
+        while(solved == false) {
+            cout << "It cannot be seen when it is there." << endl;
+            cout << "It fills up a room, much like air." << endl;
+            cout << "It cannot be touched, what is it?" << endl;
+            cin >> answer;
+            if(answer == "DARKNESS" || answer =="darkness"){
+                win++;
+                solved = true;
+                cout << "That is correct. You have found a crystal!\n";
+            }
+            else {
+                Puzzle:: damage();
+                cout << "That is incorrect. You lose one life point." << endl;
+                cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
+            if (Puzzle::get_health() <= 0) die();
+            }
+        }
+        cout << "You have solved this puzzle." << endl;
     }
 };
 
@@ -106,7 +131,7 @@ class puzzle3 : public Puzzle{
             if(answer == "NOTHING" || answer =="nothing"){
                 win++;
                 solved = true;
-                cout << "That is correct.\n";
+                cout << "That is correct.You have found a crystal!\n";
             }
             else {
                 Puzzle::damage();
@@ -115,7 +140,7 @@ class puzzle3 : public Puzzle{
             if (Puzzle::get_health() <= 0) die();
             }
         }
-        cout << "You have solved the puzzle." << endl;
+        cout << "You have solved this puzzle." << endl;
     }
 };
 
@@ -130,7 +155,7 @@ class puzzle4 : public Puzzle{
             if(answer == "KEYBOARD" || answer == "keyboard"){
                 win++;
                 solved = true;
-                cout << "That is correct.\n";
+                cout << "That is correct. You have found a crystal!\n";
             }
             else {
                 Puzzle::damage();
@@ -139,6 +164,6 @@ class puzzle4 : public Puzzle{
             if (Puzzle::get_health() <= 0) die();
             }
         }
-        cout << "You have solved the puzzle." << endl;
+        cout << "You have solved this puzzle." << endl;
     }
 };
